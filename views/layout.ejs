@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Blog!</title>
+    <meta name="description" content="A blog">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <!-- <a href="/">Posts</a> -->
+        </h1>
+      </header>
+      
+      <main>
+        <%- include(template) %>
+      </main>
+    </div>
+    <footer class="wrapper">
+      <% if (signedIn) { %>
+        <p><a href="/posts/new">New post</a></p>
+        <form method="POST" action="/sessions?_method=DELETE">
+          <button class="btn--link unpadded">Sign out</button>
+        </form>
+      <% } else { %>
+        <p><a href="https://rustyraygun.github.io"/>
+        Rusty Raygun
+      </a></p>
+        <!-- <p><a href="/sessions/new">Sign in</a></p> -->
+      <% } %>
+      
+      
+    </footer>
+    
+  </body>
+</html>

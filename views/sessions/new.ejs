@@ -1,0 +1,9 @@
+<h4>Sign in</h4>
+<form method="POST" action="/sessions">
+  <% if (error) { %>Incorrect password<% } %>
+  <label class="textfield" >
+    <input id="password" name="password" type="password" required>
+    <span class="textfield__label">Password</span>
+  </label>
+  <button>Sign In</button>
+</form>

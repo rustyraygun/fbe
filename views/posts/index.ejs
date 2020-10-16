@@ -1,0 +1,7 @@
+<p>&nbsp;</p>
+<% for (let i=0; i < posts.length; i++) { %>
+  <p>
+    <a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+    <small>last updated <%= posts[i].updated %></small>
+  </p>
+<% } %>

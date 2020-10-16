@@ -1,0 +1,12 @@
+<h4>Edit Post</h4>
+<form method="POST" action="/posts/<%= post.id %>?_method=PUT">
+  <label class="textfield" >
+    <input id="title" name="title" type="text" value="<%= post.title %>" required>
+    <span class="textfield__label">Title</span>
+  </label>
+  <label class="textfield">
+    <textarea id="body" name="body" required rows="10"><%= post.body %></textarea>
+    <span class="textfield__label">Body</span>
+  </label>
+  <button>Update post</button>
+</form>

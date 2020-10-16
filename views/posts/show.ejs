@@ -1,0 +1,11 @@
+<article>
+  <h3><%= post.title %></h3>
+  <p><small>last updated <%= post.updated %></small></p>
+  <%- post.formattedBody %>
+  <% if (signedIn) { %>
+    <a href="/posts/<%= post.id %>/edit">Edit</a>
+    <form method="POST" class="form-inline" action="/posts/<%= post.id %>?_method=DELETE">
+      <button>Delete</button>
+    </form>
+  <% } %>
+</article>
